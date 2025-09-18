@@ -1,0 +1,47 @@
+{
+  "store_understanding": {
+    "main_products": [
+      "Coconut Bar Soap",
+      "Snowboards"
+    ],
+    "target_market": "Outdoor sports enthusiasts and general consumers (e.g., soap users)",
+    "price_range": "medium to high",
+    "seasonality": "winter",
+    "unique_features": [
+      "Wide variety of snowboard models",
+      "Inclusion of personal care product like bar soap"
+    ]
+  },
+  "api_recommendations": {
+    "apis": {
+      "tiktokAPI": {
+        "query": "snowboarding",
+        "number": 10
+      },
+      "metaAPI": {
+        "query": "snowboarding"
+      },
+      "googleTrendsAPI": {
+        "query": "snowboarding"
+      },
+      "newsAPI": {
+        "query": "snowboarding"
+      },
+      "financeAPI": {
+        "currency_pairs": [
+          "USD/JPY",
+          "USD/CNY"
+        ],
+        "commodities": [
+          "WTI_CRUDE",
+          "BRENT_CRUDE"
+        ],
+        "stocks": [
+          "MICROSOFT",
+          "APPLE",
+          "AMAZON"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Products": [
+    {
+      "id": "gid://shopify/Product/EXAMPLE_ID",
+      "title": "Sample Product"
+    }
+  ],
+  "Collections Count": {
+    "count": 0
+  }
+}

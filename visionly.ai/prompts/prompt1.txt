@@ -1,0 +1,101 @@
+
+### 🧠 Your Requirements (Summarized):
+
+* **ChatGPT must understand** product + collection data from Shopify (as per your provided JSON).
+* You have **5 external APIs**, each requiring a **consistent output structure**:
+
+  * **TikTok API / Meta Ads API** → suggest `hashtag`
+  * **Google Trends / NewsAPI** → suggest `theme`
+  * **Yahoo Finance API (yfinanceAPI)** → suggest:
+
+    * `currency_pairs` (e.g., USD/JPY)
+    * `commodities` (e.g., WTI)
+    * `supplier_stocks` (e.g., AMZN, AAPL)
+
+---
+
+### ✅ Recommended JSON Output Schema (Consistent Format)
+
+```json
+{
+  "tiktokAPI": {
+    "hashtag": "#example_hashtag"
+  },
+  "metaAPI": {
+    "hashtag": "#example_hashtag"
+  },
+  "googleTrendsAPI": {
+    "theme": "example_theme"
+  },
+  "newsAPI": {
+    "theme": "example_theme"
+  },
+  "yfinanceAPI": {
+    "currency_pairs": ["USD_JPY", "USD_CNY"],
+    "commodities": ["WTI_CRUDE", "BRENT_CRUDE"],
+    "supplier_stocks": ["STARBUCKS", "APPLE"]
+  }
+}
+```
+
+---
+
+### 🔧 REUSABLE PROMPT TO INSTRUCT CHATGPT:
+
+"""
+You are an AI Assistant connected to a Shopify store. Based on the store’s product and collection data, analyze the business context and provide marketing and financial insights by calling the following APIs. Return the result in JSON format using the exact structure provided below. All fields must be populated with relevant suggestions based on the products, collections, and seasonal/commercial trends.
+
+Use the Shopify product and collection data provided here:
+\[Insert Shopify JSON here]
+
+Now suggest the following:
+
+* From **TikTok trends**, recommend a hashtag for promoting these products.
+* From **Meta Ads**, suggest a high-performing hashtag related to the product themes.
+* From **Google Trends**, extract a general theme or rising topic related to the products.
+* From **NewsAPI**, suggest a news-relevant theme that could impact customer interest.
+* From **Yahoo Finance**, based on global and product-based signals, recommend:
+
+  * currency pairs from this list: USD\_JPY, USD\_CNY
+  * commodities from this list: WTI\_CRUDE, BRENT\_CRUDE, CRUDE\_ETF
+  * supplier stocks from this list: STARBUCKS, APPLE, MICROSOFT, AMAZON
+  * number should be always 15
+**Output must follow this exact JSON structure:**
+
+```json
+"apis": {
+    "tiktokAPI": {
+      "query": "dogs",
+      "number": 10
+    },
+    "metaAPI": {
+      "query": "dogs"
+    },
+    "googleTrendsAPI": {
+      "query": "dogs"
+    },
+    "newsAPI": {
+      "query": "dogs"
+    },
+    "financeAPI": {
+      "currency_pairs": ["USD/JPY"],
+      "commodities": ["CRUDE_ETF"],
+      "stocks": ["AMAZON"]
+    }
+  }
+```
+
+Make all suggestions contextually relevant to the product catalog and collections.
+"""
+
+---
+
+Would you like this same prompt rewritten with your actual Shopify data embedded to test a real-time execution?
+
+Or should I adapt this for use as an internal API call template or LangChain agent instruction set?
+
+Let me know if you want:
+
+* 📦 Live JSON example for your dataset
+* 🧠 LangChain-style instruction set
+* 🔁 Custom template with slot variables for automation

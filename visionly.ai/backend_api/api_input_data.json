@@ -1,0 +1,72 @@
+{
+  "tiktok_api": {
+    "hashtags": [
+      "snowboard",
+      "wintersports"
+    ],
+    "num_results": 20,
+    "raw_dir": "backend_api_backup/tiktok_api/data",
+    "analysis_dir": "backend_api_backup/tiktok_api/analysed_data"
+  },
+  "meta_api": {
+    "hashtags": [
+      "snowboard",
+      "wintersports"
+    ],
+    "results_limit": 30,
+    "raw_dir": "backend_api_backup/meta_api/data",
+    "analysis_dir": "backend_api_backup/meta_api/analysed_data"
+  },
+  "google_trends": {
+    "keyword": "snowboard equipment",
+    "base_dir": "backend_api_backup/google_trends/google_trends_data"
+  },
+  "finance_api": {
+    "currency_pairs": [
+      "USD_JPY",
+      "USD_CNY"
+    ],
+    "commodities": [
+      "WTI_CRUDE"
+    ],
+    "supplier_stocks": [
+      "AMAZON",
+      "MICROSOFT"
+    ],
+    "analysis_dir": "backend_api_backup/finance_api/analysed_data"
+  },
+  "news_api": {
+    "theme": "snowboard industry",
+    "analysis_dir": "backend_api_backup/news_api/news_analysis_data"
+  },
+  "apis": {
+    "tiktokAPI": {
+      "query": "football",
+      "number": 10
+    },
+    "metaAPI": {
+      "query": "football"
+    },
+    "googleTrendsAPI": {
+      "query": "football"
+    },
+    "newsAPI": {
+      "query": "football"
+    },
+    "financeAPI": {
+      "currency_pairs": [
+        "USD/JPY",
+        "USD/CNY"
+      ],
+      "commodities": [
+        "WTI_CRUDE",
+        "BRENT_CRUDE"
+      ],
+      "stocks": [
+        "STARBUCKS",
+        "APPLE",
+        "MICROSOFT"
+      ]
+    }
+  }
+}
