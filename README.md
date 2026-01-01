@@ -1,4 +1,4 @@
-(NOTICE: This is a copy of the original repositary since my teammate who is the owner of the orginal repositary wanted to keep it private to 100% make sure that our env keys are not exposed)
+(NOTICE: This is a copy of the original repositary since my teammate who is the owner of the orginal repositary)
 # fy- Shopify Analytics Platform
 
 # https://youtu.be/AFF7qzg_0t8
